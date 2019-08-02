@@ -6,7 +6,7 @@ node{
       }  
       stage('Build'){
          //// Get maven home path and build
-        sh "${mvnHome}/bin/mvn clean package -Dmaven.test.skip=true"
+        sh "$/home/guna1/Softwares/apache-maven-3.5.4/bin/mvn clean package -Dmaven.test.skip=true"
       }
       
       stage('Deploy') {     
