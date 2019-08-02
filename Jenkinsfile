@@ -11,7 +11,7 @@ node{
       
       stage('Deploy') {     
             sshagent(['Tomcat-jenkins']) {
-               sh sshpass -p "guna2" scp target/*.war guna2@172.17.0.5:/home/guna2/Softwares/apache-tomcat-8.5.34/webapps
+               sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war guna2@172.17.0.5:/home/guna2/Softwares/apache-tomcat-8.5.34/webapps'
           }
          
      }
