@@ -6,11 +6,11 @@ node{
       }  
       stage('Build'){
          //// Get maven home path and build
-        sh "$/home/guna1/Softwares/apache-maven-3.5.4/bin/mvn clean package -Dmaven.test.skip=true"
+        sh '/home/guna1/Softwares/apache-maven-3.5.4/bin/mvn clean package -Dmaven.test.skip=true'
       }
       
       stage ('Test-JUnit'){
-         sh "'$/home/guna1/Softwares/apache-maven-3.5.4/bin/mvn' test surefire-report:report"
+         sh '/home/guna1/Softwares/apache-maven-3.5.4/bin/mvn' test surefire-report:report'
       }  
       
       stage('Deploy') {     
